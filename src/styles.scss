@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+main{
+  padding: 10px;
+  .page-title{
+    font-size: 40px;
+    color: black;
+  }
+  .page-description{
+    font-size: 15px;
+    color: #222;
+  }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

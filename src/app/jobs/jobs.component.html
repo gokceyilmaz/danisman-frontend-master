@@ -1,0 +1,19 @@
+<main class="main">
+  <div class="d-flex align-items-center">
+    <div class="flex-grow-1">
+      <h1 class="page-title">İŞLER</h1>
+      <p class="page-description">
+        Güncel işler aşağıda listelenmektedir.
+      </p>
+    </div>
+    <button mat-raised-button color="primary" (click)="openJobModal()"> Yeni İş Ekle </button>
+  </div>
+  <hr>
+  <div class="jobs">
+        <div class="row">
+          <div *ngFor="let job of jobs">
+            <app-jobs-item [jobsItem]="job"></app-jobs-item>
+          </div>
+        </div>
+  </div>
+</main>

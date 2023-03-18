@@ -1,0 +1,40 @@
+<h2 mat-dialog-title>{{data ? 'İşi Güncelle' : 'Yeni İş Ekle'}}</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="jobForm">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>İlan Başlığı</mat-label>
+      <input matInput placeholder="Örneğin Java Developer" formControlName="title">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Açıklama</mat-label>
+      <input matInput placeholder="Örneğin Backend uzmanı arıyoruz!" formControlName="description">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Maaş</mat-label>
+      <input matInput placeholder="Örneğin 5000" formControlName="salary">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Sektör</mat-label>
+      <input matInput placeholder="Örneğin Yazılım" formControlName="sector">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Deneyim</mat-label>
+      <input matInput placeholder="Örneğin 3 yıl deneyim" formControlName="experience">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Şirket</mat-label>
+      <input matInput placeholder="Örneğin Turkcell" formControlName="company">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Adres</mat-label>
+      <input matInput placeholder="Örneğin İstanbul" formControlName="address">
+    </mat-form-field>
+  </form>
+  <hr>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button class="text-white" (click)="data ? deleteJob(): ''">{{data ? 'Sil' : '' }}</button>
+  <button mat-raised-button color="primary" mat-dialog-close=>Vazgeç</button>
+  <button mat-raised-button color="primary" (click)="data ? updateJob() : addJob()">{{data ? 'Güncelle' : 'Kaydet' }}</button>
+
+</mat-dialog-actions>
